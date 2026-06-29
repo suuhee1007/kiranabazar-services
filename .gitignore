@@ -1,0 +1,10 @@
+target/
+*.iml
+*.log
+*.class
+.DS_Store
+.idea/
+*.jar
+*.war
+__pycache__/
+*.db
