@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Wake Render service
         run: |
-          curl -fsS -m 20 "https://kiranabazar-services.onrender.com/health" || true
+          curl -I -m 10 "https://kiranabazar-services.onrender.com/health" || true
