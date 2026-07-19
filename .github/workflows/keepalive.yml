@@ -1,6 +1,7 @@
 name: Keep Render App Awake
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/10 * * * *'
 
@@ -10,4 +11,4 @@ jobs:
     steps:
       - name: Wake Render service
         run: |
-          curl -I -m 10 "https://https://kiranabazar-services.onrender.com/health" || true
+          curl -fsS -m 20 "https://kiranabazar-services.onrender.com/health" || true
