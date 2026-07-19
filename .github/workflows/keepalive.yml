@@ -1,0 +1,13 @@
+name: Keep Render App Awake
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake Render service
+        run: |
+          curl -I -m 10 "https://https://kiranabazar-services.onrender.com/health" || true
